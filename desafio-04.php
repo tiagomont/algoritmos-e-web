@@ -1,19 +1,14 @@
 <?php
 
-$sum = $cont = 0;
+$num = 10;
+$primeiro = 0;
+$segundo = 1;
 
-while (true) {
-    // O usuario escreve um valor 
-    $num = intval(readline("Escreva um número (-1 para parar): "));
-    if ($num < 0) {
-        break;
-    } else {
-        $cont += 1;
-        $sum += $num;
-    }
+echo "Os primeiros $num números da sequência de Fibonacci são:" . PHP_EOL;
+
+for ($i = 0; $i < $num; $i++) {
+    echo "$primeiro, ";
+    $temp = $primeiro + $segundo;
+    $primeiro = $segundo;
+    $segundo = $temp;
 }
-
-$media = $sum / $cont;
-
-echo "A média dos valores é: $media";
-

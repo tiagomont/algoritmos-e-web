@@ -1,0 +1,20 @@
+<?php
+
+function saycat($msg) {
+    $tam = strlen($msg);
+    $linha = str_repeat('-', $tam);
+    $mensagem = <<<TEXTO
+     $linha
+    <$msg>
+    $linha
+     \
+      \ |\---/|
+        | o_o |
+         \_^_/
+TEXTO;
+
+    echo $mensagem;
+}
+
+$texto = readline("Escreva algo patra o gato falar: ");
+saycat($texto);
