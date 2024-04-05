@@ -1,12 +1,12 @@
 <?php
 
 function saycat($msg) {
-    $tam = strlen($msg);
+    $tam = strlen($msg)+2;
     $linha = str_repeat('-', $tam);
     $mensagem = <<<TEXTO
      $linha
-    <$msg>
-    $linha
+    < $msg >
+     $linha
      \
       \ |\---/|
         | o_o |
